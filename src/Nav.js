@@ -1,10 +1,10 @@
 import NavBar from "./components/navbar/NavBar";
 import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About  from "./pages/About";
-import Committee from "./pages/Committee";
-import Events from "./pages/Events"
-import Membership from "./pages/Membership"
+import Home from "./pages/home/Home";
+import About  from "./pages/about/About";
+import Committee from "./pages/committee/Committee";
+import Events from "./pages/events/Events"
+import Membership from "./pages/membership/Membership"
 import Contact from "./pages/contacts/Contact";
 import Footer from "./components/footer/Footer";
 
