@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import Links from '../Links';
 
 function NavBar() {
     const [click, setClick] = useState(false);
@@ -24,67 +25,18 @@ function NavBar() {
                 </div>
                 <div className="nav-container">
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/about"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                About
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/committee"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Committee
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/events"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Events
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/membership"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Membership
-                            </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/contact"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Contact
-                            </NavLink>
-                        </li>
+                        {Links.map((link, index) => (
+                            <li className="nav-item" key={index}>
+                                <NavLink
+                                    exact
+                                    to={link.link}
+                                    className="nav-links"
+                                    onClick={handleClick}
+                                >
+                                    {link.title}
+                                </NavLink>
+                            </li>
+                        ))}
                     </ul>
                     <div className="nav-icon" onClick={handleClick}>
                         <i className={click ? "fas fa-times" : "fas fa-bars"}></i>

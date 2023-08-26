@@ -1,37 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import Links from '../Links';
 
-const Links = [
-    {
-        title: "Home",
-        link: "/"
-    },
-    {
-        title: "About",
-        link: "/about"
-    },
-    {
-        title: "Committee",
-        link: "/committee"
-    },
-    {
-        title: "Events",
-        link: "/events"
-    },
-    {
-        title: "Membership",
-        link: "/membership"
-    },
-    {
-        title: "Contact",
-        link: "/contact"
-    },
-    {
-        title: "Newsletter",
-        link: "/newsletter"
-    }
-];
 
 const Footer = () => {
     return (

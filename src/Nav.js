@@ -5,7 +5,7 @@ import About  from "./pages/About";
 import Committee from "./pages/Committee";
 import Events from "./pages/Events"
 import Membership from "./pages/Membership"
-import Contact from "./pages/Contact";
+import Contact from "./pages/contacts/Contact";
 import Footer from "./components/footer/Footer";
 
 function Nav() {

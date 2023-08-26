@@ -8,7 +8,7 @@ import Committee from "./pages/Committee";
 import Events from "./pages/Events";
 import Membership from "./pages/Membership";
 import Newsletter from "./pages/Newsletter";
-import Contact from "./pages/Contact";
+import Contact from "./pages/contacts/Contact";
 
 import {Routes, Route} from 'react-router-dom';
 
