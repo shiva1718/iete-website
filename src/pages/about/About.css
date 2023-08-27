@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+.down > h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    color: white;
+}
+
+.parallax-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /*width: 98vw;*/
+    background-image: url("https://img.freepik.com/free-vector/cartoon-laboratory-room-with-computer_23-2148885355.jpg?w=1380&t=st=1693126666~exp=1693127266~hmac=a5b67bc71a2960aabf0efb0188555b07db594d247a4d777eed1e5047950c6d46");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.solid-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /*width: 98.5vw;*/
+    background-color: black;
+}
+
+.bottom-view {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    /*padding: 40px;*/
+    color: white;
+    opacity: 0; /* Start columns as hidden */
+    transform: translateY(100px); /* Move columns down initially */
+    animation: slideIn 1s forwards; /* Apply animation */
+}
+
+.bottom-view > h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.bottom-view > p {
+    /*max-width: 100%;*/
+    word-wrap: break-word;
+    font-size: 21px;
+    line-height: 1.8;
+    padding: 70px;
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -25%);
+    left: 50%;
+    animation: indicateScroll 1.5s infinite;
+}
+
+@keyframes indicateScroll {
+    0% {
+        top: 20%;
+    }
+    50% {
+        top: 40%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+.about-main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    font-family: "Segoe UI", serif;
+    flex: 1;
+    padding: 40px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.column h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.column p {
+    font-size: 18px;
+}
+
+.column p i {
+    margin-right: 15px;
+}
+
+.arrow {
+    transform: rotate(90deg);
+}
+
+.column > p{
+    line-height: 2.2rem;
+}
+
+@media (max-width: 767px) {
+    .about-container {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .column h2 {
+        font-size: 20px;
+    }
+
+    .column p {
+        font-size: 16px;
+    }
+}
+
+
+.counters-wrapper {
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+    .counters-wrapper {
+        flex-direction: column;
+    }
+}
+
+.colleges-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px;
+}
+
+.college-card {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.college-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+@media (max-width: 1023px) {
+    .colleges-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        gap: 15px;
+    }
+
+    .college-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .colleges-list {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+        gap: 10px;
+    }
+}
